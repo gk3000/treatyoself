@@ -30,7 +30,7 @@ class Contact extends React.Component {
             alert('Your e-mail has been received. We will reply shortly. Thanks!')
     })
     .catch(function (error){
-      console.log(error)
+      // console.log(error)
     })
   }
   render(){

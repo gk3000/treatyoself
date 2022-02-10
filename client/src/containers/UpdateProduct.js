@@ -35,7 +35,7 @@ class UpdateProduct extends React.Component {
       })
     }
     catch(error){
-      console.log(error)
+      // console.log(error)
     }
     window.location='/products'
   }

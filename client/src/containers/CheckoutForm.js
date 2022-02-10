@@ -37,7 +37,7 @@ import image from '../images/Payment.png'
       setName({
         name: '',
       })
-      console.log(response)
+      // // console.log(response)
     } 
     catch(error){
     } 
@@ -46,7 +46,7 @@ import image from '../images/Payment.png'
       card: elements.getElement(CardElement),
     })
     if(!error){
-      console.log('Stripe 23 | token generated!', paymentMethod)
+      // // console.log('Stripe 23 | token generated!', paymentMethod)
       try {
         const { id } = paymentMethod;
         const response = await Axios.post(`${URL}/payment/charge`, 
@@ -56,24 +56,24 @@ import image from '../images/Payment.png'
 
       }
       );
-      console.log('Stripe 35 | data', response.data.success)
+      // // console.log('Stripe 35 | data', response.data.success)
       if (response.data.success){
-        console.log('CheckoutForm.js 25 | payment succesful!')
+        // // console.log('CheckoutForm.js 25 | payment succesful!')
         localStorage.setItem('amount', JSON.stringify(0));
         localStorage.setItem('count', JSON.stringify(0));
         localStorage.setItem('shopping-cart', JSON.stringify([]))
         paymentOk = true 
-        console.log(paymentOk) 
+        // // console.log(paymentOk) 
         window.location = '/payment/success' 
         updateStock()
         
 
       }
       } catch (error){
-        console.log('CheckoutForm.js 28 |', error)
+        // // console.log('CheckoutForm.js 28 |', error)
       }
     } else {
-      console.log(error.message)
+      // // console.log(error.message)
       window.location = '/payment/error' 
 
     }
@@ -97,7 +97,7 @@ import image from '../images/Payment.png'
         description = key1.description
         price = key1.price
         stock = key1.stock - value1
-        console.log(stock)
+        // // console.log(stock)
 
         const stocking  = async () => {
         try {
@@ -109,10 +109,10 @@ import image from '../images/Payment.png'
             priceUp: price,
             stockUp: stock,
             })
-            console.log('its working!!!! stock updated')
+            // // console.log('its working!!!! stock updated')
             }
             catch(error){
-            console.log(error)
+            // // console.log(error)
             }
           }
           stocking();

@@ -29,7 +29,7 @@ class AddProduct extends React.Component {
         price: price,
         stock: stock
       })
-      console.log(response)
+      // console.log(response)
       this.setState({
         name: '',
         image: '',
@@ -39,7 +39,7 @@ class AddProduct extends React.Component {
       })
     }
     catch(error){
-      console.log(error)
+      // console.log(error)
     }
     window.location = '/products'
   }

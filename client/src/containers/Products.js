@@ -14,7 +14,7 @@ class Products extends React.Component {
    async findAll(){
      try {
        const response = await Axios.get(`${URL}/api/products/`)
-       console.log(response)
+       // // console.log(response)
        this.setState({
          products: response.data.products,
          loading: false

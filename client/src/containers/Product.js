@@ -17,7 +17,7 @@ class Product extends React.Component{
       this.setState({
         product: response.data.product
       });
-      console.log(response)
+      // console.log(response)
     }
     catch(error){
       this.setState({ error })

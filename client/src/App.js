@@ -36,7 +36,7 @@ function App() {
 			const response = await axios.post(`${URL}/admin/verify_token`);
 			return response.data.ok ? setIsLoggedIn(true) : setIsLoggedIn(false);
 		} catch (error) {
-			console.log(error);
+			// console.log(error);
 		}
 	};
 
@@ -45,7 +45,7 @@ function App() {
 	}, []);
 
 	const login = (token) => {
-		console.log('token ===>', token);
+		// // console.log('token ===>', token);
 		localStorage.setItem('token', JSON.stringify(token));
 		setIsLoggedIn(true);
 	};

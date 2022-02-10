@@ -23,14 +23,14 @@ const Register = (props) => {
 				password2: form.password2
 			});
 			setMessage(response.data.message);
-			//console.log(response)
+			//// console.log(response)
 			if (response.data.ok) {
 				setTimeout(() => {
 					props.history.push('/login');
 				}, 2000);
 			}
 		} catch (error) {
-			console.log(error);
+			// console.log(error);
 		}
 	};
 
